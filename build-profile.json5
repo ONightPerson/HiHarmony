@@ -60,6 +60,18 @@
     {
       "name": "library",
       "srcPath": "./library",
+    },
+    {
+      "name": "shared",
+      "srcPath": "./shared",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
     }
   ]
 }

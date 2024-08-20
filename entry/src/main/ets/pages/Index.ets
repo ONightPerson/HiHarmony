@@ -1,5 +1,6 @@
 import { router } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
+// import { MainPage } from 'library'
 
 @Entry
 @Component
@@ -31,13 +32,15 @@ struct Index {
         })
         .onClick(() => {
           console.log("click to jump to the second page")
-          router.pushUrl({url: 'pages/Second'}).then(() => {
+          router.pushUrl({ url: 'pages/Second' }).then(() => {
             console.log('Succeeded in jumping to the second page')
           }).catch((err: BusinessError) => {
             console.error(`Failed to jump to second page.Code is ${err.code}, message is${err.message}`)
           })
         })
+      // MainPage()
     }
+
     .height('100%')
     .width('100%')
   }

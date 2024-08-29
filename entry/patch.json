@@ -1,7 +1,7 @@
 {
   "app": {
     "bundleName": "com.liubz.hiharmony",
-    "patchVersionCode": 2000009,
+    "patchVersionCode": 2000041,
     "versionCode": 1000000
   },
   "module": {

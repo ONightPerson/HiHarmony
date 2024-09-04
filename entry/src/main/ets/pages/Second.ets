@@ -1,7 +1,7 @@
 // Second.ets
 import { router } from '@kit.ArkUI'
 import { BusinessError } from '@kit.BasicServicesKit'
-import { add } from 'shared'
+// import { add } from 'shared'
 import { CommonDialog } from '../component/dialog/CommonDialog'
 
 @Entry
@@ -37,7 +37,7 @@ struct Second {
     Row() {
       Column() {
         Image($r('app.media.back')).width(40).height(40)
-        Text(add(1, 2).toString())
+        // Text(add(1, 2).toString())
         Text(this.message)
           .fontSize(50)
           .fontWeight(FontWeight.Bold)

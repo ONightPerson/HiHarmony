@@ -3,6 +3,17 @@
     "pages/Index",
     "pages/Second",
     "pages/Third",
-    "pages/PageBuilder"
+    "pages/PageBuilder",
+    "pages/localstorage/main",
+    "pages/localstorage/Case1",
+    "pages/localstorage/Case2",
+    "pages/localstorage/Case3",
+    "pages/localstorage/Case5",
+    "pages/rendercontrol/main",
+    "pages/rendercontrol/ConditionRender",
+    "pages/rendercontrol/ForEachRender",
+    "pages/concurrent/main",
+    "pages/concurrent/OnceIO",
+    "pages/concurrent/TaskPool"
   ]
 }

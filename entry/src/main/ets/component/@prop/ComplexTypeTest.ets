@@ -22,7 +22,7 @@ struct ComplexTypeInner {
       Text(`${this.title.a.value}`)
       Button('修改复杂类型').onClick(() => {
         this.title.value = 'Hi'
-        this.title.a.value = 'ArkUI'
+        this.title.a.value = 'ArkUI' // 可以观察到第二层的变化
       })
     }
 

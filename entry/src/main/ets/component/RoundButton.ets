@@ -10,9 +10,9 @@ export struct RoundButton {
         angle: -90,
         colors: [['#FFDD19', 0.5], ['#FFE74D', 1]]
       })
+      .width('100%')
       .fontSize(16)
       .type(ButtonType.Capsule)
-      .width('100%')
       .height(48)
   }
 }

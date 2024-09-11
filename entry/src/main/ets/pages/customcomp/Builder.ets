@@ -1,4 +1,4 @@
-import { ChildTmp, overBuilder, Tmp } from '../component/GlobalBuilder'
+import { ChildTmp, overBuilder, Tmp } from '../../component/GlobalBuilder'
 
 @Entry
 @Component

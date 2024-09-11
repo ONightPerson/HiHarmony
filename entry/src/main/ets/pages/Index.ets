@@ -1,23 +1,9 @@
 import { router } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { RoundButton } from '../component/RoundButton'
-import { TitleBar } from '../component/CommonComp'
-import { AnimatablePropertyExample } from '../component/AnimatablePropertyExample'
-import { StateWatcher } from '../component/@state/StateWatcher'
-import { PropWatcher } from '../component/@prop/PropWatcher'
-import { LinkWatcher } from '../component/@link/LinkWatcher'
-import { ProvideTest } from '../component/@provide/ProvideTest'
-
-// import { MainPage } from 'library'
 
 @Entry
 @Component
 struct Index {
-  @State private message: string = 'Liu Bao zhu';
-  @State btnText: string = "进入第二个页面";
-  submit: () => void = () => {
-
-  }
+  scroller: Scroller = new Scroller() // 可滚动容器组件
 
   onPageShow(): void {
     console.info("首页 onPageShow")
@@ -32,63 +18,25 @@ struct Index {
   }
 
   build() {
-    Row() {
+    Scroll(this.scroller) {
       Column() {
-        TitleBar()
-        // Button('测试私有自定义构建函数').onClick(() => {
-        //   router.pushUrl({ url: 'pages/PageBuilder' })
-        // })
-        // AnimatablePropertyExample()
-        // StateWatcher()
-        // PropWatcher()
-        // LinkWatcher()
-        // ProvideTest()
-        // Button('学习LocalStorage').onClick(() => {
-        //   router.pushUrl({ url: 'pages/localstorage/main' })
-        // })
-        // Button('学习渲染控制').onClick(() => {
-        //   router.pushUrl({ url: 'pages/rendercontrol/main' })
-        // })
-        Button('学习并发').onClick(() => {
+        Button('自定义组件').onClick(() => {
+          router.pushUrl({ url: 'pages/customcomp/main' })
+        }).margin({ top: 16 })
+        Button('状态管理').onClick(() => {
+          router.pushUrl({ url: 'pages/statemanager/main' })
+        }).margin({ top: 16 })
+        Button('渲染控制').onClick(() => {
+          router.pushUrl({ url: 'pages/rendercontrol/main' })
+        }).margin({ top: 16 })
+        Button('并发管理').onClick(() => {
           router.pushUrl({ url: 'pages/concurrent/main' })
-        })
-        // RelativeContainer() {
-        //     Text(this.message)
-        //       .id('HelloWorld')
-        //       .fontSize(50)
-        //       .fontWeight(FontWeight.Bold)
-        //       .alignRules({
-        //         center: { anchor: '__container__', align: VerticalAlign.Center },
-        //         middle: { anchor: '__container__', align: HorizontalAlign.Center }
-        //       })
-        //     RoundButton({ btnName: '进入下一页', submitArrow: this.submit })
-        //       .id('go_to_second')// .type(ButtonType.Capsule)
-        //       .alignRules(
-        //         {
-        //           bottom: { anchor: '__container__', align: VerticalAlign.Bottom },
-        //           middle: { anchor: '__container__', align: HorizontalAlign.Center },
-        //         }
-        //       )
-        //       .margin({
-        //         bottom: 200,
-        //       })
-        //       .onClick(() => {
-        //         console.log("click to jump to the second page")
-        //         router.pushUrl({ url: 'pages/Second' }).then(() => {
-        //           console.log('Succeeded in jumping to the second page')
-        //         }).catch((err: BusinessError) => {
-        //           console.error(`Failed to jump to second page.Code is ${err.code}, message is${err.message}`)
-        //         })
-        //       })
-        //
-        //     // MainPage()
-        //   }
-          .padding({ left: 16, right: 16 })
+        }).margin({ top: 16 })
       }
       .height('100%')
-      .padding({ left: 16, right: 16 })
+      .width('100%')
+      .margin({ top: 20 })
+      .alignItems(HorizontalAlign.Center)
     }
-    .width('100%')
-    .alignItems(VerticalAlign.Top)
   }
 }
